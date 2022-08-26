@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--========== BOX ICONS ==========-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/menu.css" />
+    <link rel="icon" href="aplikasi/favic.ico" />
+
+    <title>TrivelA</title>
+  </head>
+  <body>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="bx bx-chevron-up scrolltop__icon"></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">TrivelA</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="menu.html" class="nav__link active-link">Menu</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#contact" class="nav__link">Contact us</a>
+            </li>
+            <!-- <li class="nav__item">
+              <a href="#" class="nav__link"><i class="bx bx-cart-alt"></i></a>
+            </li> -->
+
+            <!-- <li><i class='bx bx-moon change-theme' id="theme-button"></i></li> -->
+            <li class="nav__item">
+              <a href="aplikasi/login.php" class="nav__link btn__login"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section class="menu section bd-container">
+      <h2 class="section-title">Our Menu</h2>
+
+      <!-- Control buttons -->
+      <div class="section-subtitle" id="myBtnContainer">
+        <button class="button active" onclick="filterSelection('all')">
+          Show all
+        </button>
+        <button class="button" onclick="filterSelection('cake')">Cake</button>
+        <button class="button" onclick="filterSelection('bread')">Bread</button>
+        <button class="button" onclick="filterSelection('donut')">Donut</button>
+        <button class="button" onclick="filterSelection('cookies')">
+          Cookie
+        </button>
+      </div>
+
+      <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+
+      <div class="menu__container bd-grid">
+        <div class="menu__content cake">
+          <img src="assets/img/cake/redvelvet.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Red Velvet</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 25k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+
+        <div class="menu__content bread">
+          <img src="assets/img/cake/croissant.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Croissant</h3>
+          <span class="menu__detail">Bread</span>
+          <span class="menu__preci">Rp. 10k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+
+        <div class="menu__content donut">
+          <img src="assets/img/cake/doughnut.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Doughnut</h3>
+          <span class="menu__detail">Donut</span>
+          <span class="menu__preci">Rp. 8k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img src="assets/img/cake/cupcake2.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Cup Cake</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 12k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+
+        <div class="menu__content bread">
+          <img src="assets/img/cake/brownies.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Brownies</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 35k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+
+        <div class="menu__content donut">
+          <img src="assets/img/cake/roll cake.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Vanilla Roll Cake</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 35k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img
+            src="assets/img/cake/Birthday cake.jpg"
+            alt=""
+            class="menu__img"
+          />
+          <h3 class="menu__name">Birthday Cake</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 55k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img
+            src="assets/img/cake/black forest.jpg"
+            alt=""
+            class="menu__img"
+          />
+          <h3 class="menu__name">Black Forest</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 46k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img
+            src="assets/img/cake/Colorful cake.jpg"
+            alt=""
+            class="menu__img"
+          />
+          <h3 class="menu__name">Rainbow Cake</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 53k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img
+            src="assets/img/cake/vanilla cup cake.jpg"
+            alt=""
+            class="menu__img"
+          />
+          <h3 class="menu__name">Vanilla Cup Cake</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 13k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img src="assets/img/cake/tiny cake.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Tiny Birthday Cake</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 23k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img
+            src="assets/img/cake/dry brownies.jpg"
+            alt=""
+            class="menu__img"
+          />
+          <h3 class="menu__name">Dry Brownies</h3>
+          <span class="menu__detail">Dessert</span>
+          <span class="menu__preci">Rp. 28k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cookies">
+          <img
+            src="assets/img/cake/pastry cookies.jpg"
+            alt=""
+            class="menu__img"
+          />
+          <h3 class="menu__name">Pastry Cookies</h3>
+          <span class="menu__detail">Cookies</span>
+          <span class="menu__preci">Rp. 22k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cookies">
+          <img
+            src="assets/img/cake/strawberry cookies.jpg"
+            alt=""
+            class="menu__img"
+          />
+          <h3 class="menu__name">Strawberry Cookies</h3>
+          <span class="menu__detail">Cookies</span>
+          <span class="menu__preci">Rp. 26k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+        <div class="menu__content cake">
+          <img src="assets/img/cake/tower cake.jpg" alt="" class="menu__img" />
+          <h3 class="menu__name">Tower Cake</h3>
+          <span class="menu__detail">Cake</span>
+          <span class="menu__preci">Rp. 63k</span>
+          <a href="#" class="button menu__button"
+            ><i class="bx bx-cart-alt"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer section bd-container">
+      <div class="footer__container bd-grid">
+        <div class="footer__content">
+          <a href="#" class="footer__logo">Tasty Food</a>
+          <span class="footer__description">Restaurant</span>
+          <div>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Services</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Delivery</a></li>
+            <li><a href="#" class="footer__link">Pricing</a></li>
+            <li><a href="#" class="footer__link">Fast food</a></li>
+            <li><a href="#" class="footer__link">Reserve your spot</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Information</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Event</a></li>
+            <li><a href="#" class="footer__link">Contact us</a></li>
+            <li><a href="#" class="footer__link">Privacy policy</a></li>
+            <li><a href="#" class="footer__link">Terms of services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <ul>
+            <li>Medan, Indonesia</li>
+            <li>Jl. Williem Iskandar</li>
+            <li>+62 812-3333-9999</li>
+            <li>trivela@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__copy">&#169; 2020 Bedimcode. All right reserved</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
+  </body>
+</html>

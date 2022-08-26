@@ -1,0 +1,108 @@
+<!-- By : Adgrafika -->
+<!-- Di Larang Memperjual Source Code ini -->
+<?php
+include "config.php";
+session_start();
+	if($_SESSION['status']!="login"){
+		header("location:login.php");
+	}
+  function ribuan ($nilai){
+    return number_format ($nilai, 0, ',', '.');
+}
+$user = $_SESSION['username'];
+$id = $_SESSION['id_login'];
+$alamat = $_SESSION['alamat'];
+$telp = $_SESSION['telepon'];
+$toko = $_SESSION['nama_toko'];
+
+
+//     $id = $data['id_login'];
+//     $toko = $data['nama_toko'];
+//     $alamat = $data['alamat'];
+//     $telp = $data['telepon'];
+//     $level = $data['level'];
+// }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TrivelA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favic.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="assets/vendor/datatables/responsive.bootstrap4.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+  <a class="navbar-brand px-3 bg-warning" href="https://www.youtube.com/channel/UCyHwOyTkQBgwfWMOrblSUDg"><?php echo $toko ?></a>
+  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarC" aria-controls="navbarC" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars muncul"></i>
+    <i class="fa fa-times-circle fa-1x text-white close"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarC">
+    <ul class="navbar-nav ml-auto">
+    <?php if ($_SESSION['level'] == 'admin') : ?>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-desktop fa-2x"></i></span>Transaksi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="produk.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-shopping-bag fa-2x"></i></span>Data Produk</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="kategori.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-box-open fa-2x"></i></span>Kategori</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="laporan.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-chart-bar fa-2x"></i></span>Data laporan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pelanggan.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-users fa-2x"></i></span>Pelanggan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="user.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-users fa-2x"></i></span>Pengguna</a>
+      </li>
+    <?php endif; ?>
+
+    <?php if ($_SESSION['level'] == 'petugas') : ?>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-desktop fa-2x"></i></span>Transaksi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pelanggan.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-users fa-2x"></i></span>Pelanggan</a>
+      </li>
+    <?php endif; ?>
+
+    <?php if ($_SESSION['level'] == 'pemilik') : ?>
+      <li class="nav-item">
+        <a class="nav-link" href="laporan.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-chart-bar fa-2x"></i></span>Data laporan</a>
+      </li>
+    <?php endif; ?>
+      <li class="nav-item">
+        <a class="nav-link" href="pengaturan.php">
+        <span class="text-center d-block pt-2"><i class="fa fa-cogs fa-2x"></i></span>Pengaturan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php" onclick="javascript:return confirm('Anda yakin ingin keluar ?');">
+        <span class="text-center d-block pt-2"><i class="fa fa-sign-out-alt fa-2x"></i></span>Keluar</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<div class="container">

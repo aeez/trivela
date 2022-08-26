@@ -1,0 +1,13 @@
+Pengembangan
+BB.php
+resep.php
+untuk buat sistem stok
+
+sistem member
+
+cetak laporan
+
+generator password
+generate.php
+
+regex untuk keamanan link
